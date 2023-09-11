@@ -13,8 +13,9 @@ const AddShowTimes = () => {
     const id = useParams().id;
     
     useEffect(()=>{
-    //   getMovieByTitle(query)
-        getCurrent()
+      
+        // getCurrent()
+        getMovieByTitle(query)
       .then((data)=>{setMovies(data.movies); setMovieTitles(data.movies.map((movie)=>movie.TITLE)) })
       .catch((err)=>console.log(err))
 
